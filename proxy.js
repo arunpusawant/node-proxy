@@ -19,7 +19,7 @@ var server = require('http').createServer(function(req, res) {
     // No matter what path you put in, this is the path that will be requested
     reqUrl.pathname = url.resolve(reqUrl.pathname, '/solr-example/collection1/select');
     req.url = url.format(reqUrl);
-    proxy.web(req, res, { target: 'http://localhost:8983' });
+    proxy.web(req, res, { target: 'http://hotstar.com' });
 });
 
 console.log("listening on port 8080");
