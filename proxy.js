@@ -17,7 +17,7 @@ var proxy = httpProxy.createProxyServer({});
 var server = require('http').createServer(function(req, res) {
     var reqUrl = url.parse(req.url);
     // No matter what path you put in, this is the path that will be requested
-    reqUrl.pathname = url.resolve(reqUrl.pathname, '/solr-example/collection1/select');
+    reqUrl.pathname = url.resolve(reqUrl.pathname, 'hotstar.com');
     req.url = url.format(reqUrl);
     proxy.web(req, res, { target: 'http://hotstar.com' });
 });
